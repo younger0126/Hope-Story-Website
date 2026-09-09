@@ -1,0 +1,22 @@
+name: HopeWeb
+version: 0.1.0
+main: tw.hopestory.hopeweb.HopeWebPlugin
+api-version: '1.20'
+author: Hope Story
+description: Hope Story 希望物語 Minecraft ↔ 官方網站橋接插件
+softdepend: [PlaceholderAPI]
+commands:
+  hopelink:
+    description: 產生 Hope Story 官方網站綁定碼
+    usage: /hopelink
+  hopeweb:
+    description: HopeWeb 管理指令
+    usage: /hopeweb <reload|sync|status>
+    permission: hopeweb.admin
+permissions:
+  hopeweb.admin:
+    description: 允許管理 HopeWeb
+    default: op
+  hopeweb.link:
+    description: 允許使用 /hopelink
+    default: true

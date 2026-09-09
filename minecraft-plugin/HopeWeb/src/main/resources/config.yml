@@ -1,0 +1,44 @@
+server:
+  id: "hope-story-main"
+  name: "Hope Story 希望物語"
+  public-ip: "play.hopestory.tw"
+  display-version: "1.20.1+"
+api:
+  enabled: false
+  base-url: "https://YOUR-API.example.com"
+  token: "CHANGE-ME"
+  sync-interval-seconds: 30
+  connect-timeout-seconds: 5
+  endpoints:
+    server-status: "/api/minecraft/server-status"
+    player-sync: "/api/minecraft/player-sync"
+    link-code: "/api/minecraft/link-code"
+link:
+  enabled: true
+  code-length: 6
+  expire-minutes: 5
+player-data:
+  level:
+    placeholder: "%hope_level%"
+    fallback: "minecraft-exp-level"
+  power:
+    placeholder: "%hope_power%"
+    fallback: "0"
+  money:
+    placeholder: "%vault_eco_balance_fixed%"
+    fallback: "0"
+  island-level:
+    placeholder: "%hope_island_level%"
+    fallback: "1"
+messages:
+  prefix: "&8[&6Hope Story&8] "
+  no-permission: "&c你沒有權限使用此指令。"
+  player-only: "&c此指令只能由遊戲內玩家使用。"
+  link-disabled: "&c網站綁定功能目前未開放。"
+  link-created:
+    - "&f你的網站綁定碼："
+    - "&6&l{code}"
+    - "&7請前往 Hope Story 官方網站輸入此驗證碼。"
+    - "&7有效時間：&f{minutes} 分鐘"
+  reload: "&aHopeWeb 設定已重新載入。"
+  sync-started: "&a已手動執行一次資料同步。"

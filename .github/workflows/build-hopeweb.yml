@@ -1,0 +1,30 @@
+name: Build HopeWeb Plugin
+
+on:
+  push:
+    paths:
+      - 'minecraft-plugin/HopeWeb/**'
+      - '.github/workflows/build-hopeweb.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build HopeWeb
+        run: mvn -B -f minecraft-plugin/HopeWeb/pom.xml clean package
+      - name: Upload HopeWeb jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: HopeWeb-0.1.0
+          path: minecraft-plugin/HopeWeb/target/HopeWeb-0.1.0.jar
