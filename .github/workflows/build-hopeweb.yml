@@ -26,5 +26,5 @@ jobs:
       - name: Upload HopeWeb jar
         uses: actions/upload-artifact@v4
         with:
-          name: HopeWeb-0.1.0
-          path: minecraft-plugin/HopeWeb/target/HopeWeb-0.1.0.jar
+          name: HopeWeb-0.1.1-RPG-SYNC
+          path: minecraft-plugin/HopeWeb/target/HopeWeb-0.1.1.jar

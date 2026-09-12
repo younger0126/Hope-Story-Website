@@ -1,10 +1,10 @@
 name: HopeWeb
-version: 0.1.0
+version: 0.1.1
 main: tw.hopestory.hopeweb.HopeWebPlugin
 api-version: '1.20'
 author: Hope Story
 description: Hope Story 希望物語 Minecraft ↔ 官方網站橋接插件
-softdepend: [PlaceholderAPI]
+softdepend: [PlaceholderAPI, SkyRPG]
 commands:
   hopelink:
     description: 產生 Hope Story 官方網站綁定碼

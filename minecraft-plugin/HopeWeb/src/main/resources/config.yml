@@ -20,16 +20,16 @@ link:
 player-data:
   level:
     placeholder: "%hope_level%"
-    fallback: "minecraft-exp-level"
+    fallback: "sky-rpg-level"
   power:
     placeholder: "%hope_power%"
-    fallback: "0"
+    fallback: "sky-rpg-power"
   money:
     placeholder: "%vault_eco_balance_fixed%"
-    fallback: "0"
+    fallback: "sky-rpg-gold"
   island-level:
     placeholder: "%hope_island_level%"
-    fallback: "1"
+    fallback: "sky-rpg-island-level"
 messages:
   prefix: "&8[&6Hope Story&8] "
   no-permission: "&c你沒有權限使用此指令。"
@@ -40,5 +40,5 @@ messages:
     - "&6&l{code}"
     - "&7請前往 Hope Story 官方網站輸入此驗證碼。"
     - "&7有效時間：&f{minutes} 分鐘"
-  reload: "&aHopeWeb 設定已重新載入。"
+  reload: "&a已重新載入 HopeWeb 設定。"
   sync-started: "&a已手動執行一次資料同步。"
