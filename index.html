@@ -3,75 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#07121d">
-  <title>Hope Story 希望物語｜官方網站</title>
-  <meta name="description" content="Hope Story 希望物語 Minecraft 空島 RPG 官方網站">
-  <link rel="stylesheet" href="assets/site-v4.css">
+  <meta name="theme-color" content="#06121f">
+  <title>Hope Story 希望物語｜Minecraft 空島 RPG</title>
+  <meta name="description" content="Hope Story 希望物語｜Minecraft 1.20.1 空島 RPG 伺服器官方網站">
+  <link rel="stylesheet" href="assets/site-v5.css">
 </head>
 <body>
-  <a class="skip-link" href="#features">跳至主要內容</a>
+  <a class="skip-link" href="#worlds">跳至主要內容</a>
   <header class="top">
     <div class="wrap top-inner">
       <a class="brand" href="#home" aria-label="Hope Story 首頁">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 29 17 46 24 29 31 24 46 19 31 2 24 19 17Z"/><circle cx="24" cy="24" r="6"/></svg>
         <span class="brand-name"><b>HOPE STORY</b><small>希望物語</small></span>
       </a>
-      <nav class="nav" aria-label="主要導覽"><a href="#features">遊戲世界</a><a href="#news">最新情報</a><a href="#rank">冒險者排行</a><a href="#hopebox">HopeBox</a></nav>
+      <nav class="nav" aria-label="主要導覽">
+        <a href="#worlds">世界</a><a href="#features">特色</a><a href="#players">玩家</a><a href="#rank">排行</a><a href="#community">社群</a>
+      </nav>
       <button class="top-join" type="button" onclick="copyIp()"><span class="join-dot"></span>加入伺服器</button>
     </div>
   </header>
+
   <main id="home">
     <section class="hero" aria-label="Hope Story 希望物語">
       <img class="hero-backdrop" src="assets/sky-realm-v3.webp" alt="雲海之上的奇幻浮空城與瀑布" fetchpriority="high" width="1659" height="948">
-      <div class="hero-glow"></div>
-      <div class="wrap hero-content">
-        <div class="hero-copybox">
-          <p class="eyebrow"><span></span>MINECRAFT SKYBLOCK RPG</p>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span>EST. 2026 · TAIWAN · JAVA 1.20.1</p>
           <h1><span>Hope Story</span><small>希望物語</small></h1>
-          <p class="tagline">在天空的盡頭，寫下你的傳說。</p>
-          <p class="hero-desc">從一座空島啟程，探索副本、打造裝備，<br class="desktop-only">與夥伴迎戰未知的世界 Boss。</p>
-          <div class="hero-actions"><button class="cta" type="button" onclick="copyIp()"><span>開始冒險</span><b>play.hopestory.tw</b><i>→</i></button><a class="ghost-link" href="#features">探索世界 <span>↓</span></a></div>
+          <p class="hero-lead">你的空島，<em>你的傳說。</em></p>
+          <p class="hero-desc">從一座 50×50 的空島開始，建造領地、培養角色、打造裝備，與夥伴一起走向天空的盡頭。</p>
+          <div class="hero-actions">
+            <button class="cta" type="button" onclick="copyIp()"><span>開始冒險</span><b id="server-ip">play.hopestory.tw</b><i>→</i></button>
+            <a class="hero-link" href="#worlds">探索六大世界 <span>↓</span></a>
+          </div>
         </div>
-        <div class="realm-stamp" aria-hidden="true"><span>SEASON</span><b>I</b><small>THE FIRST SKY</small></div>
+        <aside class="live-card" aria-label="伺服器即時狀態">
+          <div class="live-card-head"><span>LIVE SERVER STATUS</span><i></i><b id="live-status">連線中</b></div>
+          <strong class="live-name">HOPE STORY</strong><p>從一座空島，打造你的帝國。</p>
+          <dl><div><dt>線上 / 容量</dt><dd id="live-players">-- / --</dd></div><div><dt>伺服器 TPS</dt><dd id="live-tps">--</dd></div><div><dt>遊戲版本</dt><dd id="live-version">1.20.1+</dd></div></dl>
+          <small class="live-foot"><span></span><b id="mini-status">正在取得狀態</b><em id="mini-version">JAVA EDITION · 1.20.1+</em></small>
+        </aside>
       </div>
-      <div class="hero-status"><div class="wrap status-inner">
-        <span class="live-pill"><i></i><b id="live-status">連線中</b></span>
-        <span><small>線上冒險者</small><strong id="live-players">-- / --</strong></span>
-        <span><small>伺服器 TPS</small><strong id="live-tps">--</strong></span>
-        <span><small>支援版本</small><strong id="live-version">1.20.1+</strong></span>
-        <span class="mini-state" id="mini-status">目前狀態：連線中...</span><span class="mini-state" id="mini-version">版本 1.20.1+</span><b id="server-ip" class="visually-hidden">play.hopestory.tw</b>
-      </div></div>
+      <div class="hero-scroll"><span>SCROLL TO EXPLORE</span><i></i></div>
     </section>
-    <section class="world section" id="features">
+
+    <section class="worlds section" id="worlds">
       <div class="wrap">
-        <header class="section-head split-head"><div><p class="eyebrow"><span></span>EXPLORE THE WORLD</p><h2>不只生存，<br>這是一場天空冒險。</h2></div><p>每一次成長、每一件裝備、每一座島嶼，都會成為只屬於你的故事。</p></header>
-        <div class="world-grid">
-          <article class="world-card card-island featured"><div class="card-art"></div><div class="card-number">Ⅰ</div><div class="card-copy"><span>BUILD YOUR KINGDOM</span><h3>空島生存</h3><p>從一塊方塊開始，打造屬於你的天空領地。</p></div></article>
-          <article class="world-card card-rpg"><div class="card-art"></div><div class="card-number">Ⅱ</div><div class="card-copy"><span>FORGE YOUR PATH</span><h3>RPG 成長</h3><p>提升角色等級，解鎖技能與戰力。</p></div></article>
-          <article class="world-card card-boss"><div class="card-art"></div><div class="card-number">Ⅲ</div><div class="card-copy"><span>FACE THE UNKNOWN</span><h3>世界 Boss</h3><p>集結冒險者，迎戰天空強敵。</p></div></article>
-          <article class="world-card card-box wide" id="hopebox"><div class="card-art"></div><div class="card-number">✦</div><div class="card-copy"><span>OPEN THE HOPE</span><h3>HopeBox</h3><p>收藏限定裝備與珍稀獎勵，讓下一次開啟充滿驚喜。</p><code>/hb list</code></div></article>
-          <article class="world-card card-gear"><div class="card-art"></div><div class="card-number">Ⅳ</div><div class="card-copy"><span>CREATE YOUR BUILD</span><h3>自製裝備</h3><p>自由搭配詞條，建立你的專屬流派。</p></div></article>
-          <article class="world-card card-community"><div class="card-art"></div><div class="card-number">Ⅴ</div><div class="card-copy"><span>NEVER ALONE</span><h3>玩家社群</h3><p>相遇、組隊，一起寫下冒險篇章。</p></div></article>
+        <header class="section-heading"><p class="eyebrow"><span></span>EXPLORE THE REALMS</p><h2>六個世界，<br><em>一場長期冒險。</em></h2><p class="heading-copy">每一個世界都有自己的目標。從主城接取旅程，前往空島、資源世界與副本，讓你的冒險一直有下一站。</p></header>
+        <div class="realm-grid">
+          <article class="realm-card realm-main"><div class="realm-art"></div><div class="realm-index">01</div><div class="realm-info"><strong>主城</strong><span>STARTING POINT</span><p>認識 Hope Story，接取任務、遇見 NPC，準備開始你的旅程。</p></div></article>
+          <article class="realm-card realm-island"><div class="realm-art"></div><div class="realm-index">02</div><div class="realm-info"><strong>空島</strong><span>SKYBLOCK CORE</span><p>從 50×50 起步，升級你的島嶼、成員與資源。</p></div></article>
+          <article class="realm-card realm-newbie"><div class="realm-art"></div><div class="realm-index">03</div><div class="realm-info"><strong>新手平原</strong><span>LEVEL 1 — 10</span><p>熟悉戰鬥、任務與掉落，踏出 RPG 冒險的第一步。</p></div></article>
+          <article class="realm-card realm-resource"><div class="realm-art"></div><div class="realm-index">04</div><div class="realm-info"><strong>資源世界</strong><span>GATHER &amp; GROW</span><p>採集素材、累積金幣，為空島與裝備成長做好準備。</p></div></article>
+          <article class="realm-card realm-dungeon"><div class="realm-art"></div><div class="realm-index">05</div><div class="realm-info"><strong>副本遠征</strong><span>PARTY CONTENT</span><p>與隊伍挑戰副本，突破關卡並取得稀有獎勵。</p></div></article>
+          <article class="realm-card realm-boss"><div class="realm-art"></div><div class="realm-index">06</div><div class="realm-info"><strong>世界 Boss</strong><span>FACE THE UNKNOWN</span><p>與全服冒險者一起迎戰強敵，爭奪最高榮耀。</p></div></article>
         </div>
       </div>
     </section>
-    <section class="chronicle section" id="news">
+
+    <section class="systems section" id="features">
       <div class="wrap">
-        <header class="section-head"><p class="eyebrow"><span></span>ADVENTURER'S GUILD</p><h2>冒險者公會</h2></header>
-        <div class="guild-grid">
-          <article class="rank-panel" id="rank"><div class="panel-title"><div><small>HALL OF FAME</small><h3>冒險者排行</h3></div><span>TOP 5</span></div><div class="rank-tabs" role="group" aria-label="排行榜類型"><button type="button" class="on" aria-pressed="true" data-mode="power">戰力</button><button type="button" aria-pressed="false" data-mode="level">RPG 等級</button><button type="button" aria-pressed="false" data-mode="island">空島</button></div><div id="rank-list" aria-live="polite"><div class="rank-row"><span class="rank-no">—</span><span class="player"><i class="avatar">?</i>等待伺服器資料</span><span class="rank-value">--</span></div></div></article>
-          <article class="news-panel"><div class="panel-title"><div><small>CHRONICLE</small><h3>最新情報</h3></div><span>NEWS</span></div><div class="news-list">
-            <article><time>09.10</time><div><span>系統更新</span><h4>官方網站即時資料正式上線</h4><p>伺服器狀態、TPS 與冒險者排行現已同步。</p></div></article>
-            <article><time>09.10</time><div><span>開發日誌</span><h4>HopeWeb 橋接插件完成測試</h4><p>RPG 等級與戰力資料將直接從遊戲同步。</p></div></article>
-            <article><time>09.09</time><div><span>世界情報</span><h4>HopeBox 與新手旅程持續擴充</h4><p>更多獎池、任務與冒險內容即將到來。</p></div></article>
-          </div></article>
+        <header class="section-heading centered"><p class="eyebrow"><span></span>CORE GAMEPLAY SYSTEMS</p><h2>從建島到養成，<br><em>每條路都有下一個目標。</em></h2></header>
+        <div class="system-grid">
+          <article class="system-card"><div class="system-no">01</div><div class="system-label">ISLAND PROGRESSION</div><h3>空島成長與協作</h3><p>從 50×50 的小島開始，逐步升級至 500×500。島嶼成員、權限、資金與設定都由你管理。</p><b>10 級空島升級路線</b></article>
+          <article class="system-card"><div class="system-no">02</div><div class="system-label">RPG PROGRESSION</div><h3>角色等級與職業</h3><p>這裡的等級是 RPG 等級，不是 Minecraft 原版經驗等級。累積經驗、提升屬性，培養你的戰鬥方式。</p><b>RPG Lv. 1 — 100</b></article>
+          <article class="system-card"><div class="system-no">03</div><div class="system-label">EQUIPMENT BUILD</div><h3>自製裝備與詞條</h3><p>武器、防具之外，還有戒指、項鍊、符文與特殊裝備，打造只屬於你的配裝。</p><b>武器 · 防具 · 戒指 · 項鍊 · 符文</b></article>
+          <article class="system-card"><div class="system-no">04</div><div class="system-label">FORGING &amp; COMBAT</div><h3>鍛造、技能與戰鬥</h3><p>裝備可以強化、附魔與重鑄。搭配職業技能，建立自己的戰鬥流派。</p><b>技能、戰力、傷害顯示</b></article>
+          <article class="system-card"><div class="system-no">05</div><div class="system-label">CUSTOM CREATURES</div><h3>自製怪物與 Boss</h3><p>自製 RPG 怪物擁有等級、血量與掉落，副本 Boss 會成為每一段旅程的目標。</p><b>任務討伐 · Boss 挑戰</b></article>
+          <article class="system-card"><div class="system-no">06</div><div class="system-label">REWARDS &amp; COMMUNITY</div><h3>HopeBox、禮包與社群</h3><p>開啟 HopeBox、領取活動禮包，和玩家一起交流、組隊與分享冒險成果。</p><b>HopeBox · /kit · 玩家社群</b></article>
         </div>
       </div>
     </section>
-    <section class="join" id="join"><img src="assets/sky-realm-v3.webp" alt="" aria-hidden="true"><div class="wrap join-inner"><p class="eyebrow"><span></span>YOUR STORY AWAITS</p><h2>天空正在呼喚你。</h2><p>登入 Hope Story，從第一座島開始你的傳說。</p><button class="cta" type="button" onclick="copyIp()"><span>複製伺服器 IP</span><b>play.hopestory.tw</b><i>→</i></button></div></section>
+
+    <section class="progress section" id="island">
+      <div class="wrap progress-layout">
+        <div class="progress-copy"><p class="eyebrow"><span></span>ISLAND PROGRESSION</p><h2>你的島，會和野心一起長大。</h2><p>不只是蓋房子。升級空島、擴充成員、累積島嶼資金，讓每一次投入都看得見成長。</p><a class="outline-link" href="#join">開始建立空島 <span>→</span></a></div>
+        <div class="progress-board"><div class="progress-top"><span>ISLAND LEVEL</span><b>01 <i>→</i> 10</b></div><div class="progress-line"><i></i></div><div class="progress-stats"><div><small>初始範圍</small><strong>50 × 50</strong></div><div><small>最高範圍</small><strong>500 × 500</strong></div><div><small>升級路線</small><strong>10 LEVELS</strong></div><div><small>權限管理</small><strong>島主／成員</strong></div></div></div>
+      </div>
+    </section>
+
+    <section class="loadout section" id="loadout">
+      <div class="wrap loadout-layout">
+        <div class="loadout-art"><div class="equipment-orbit orbit-one"></div><div class="equipment-orbit orbit-two"></div><div class="equipment-core">✦</div><span class="equip-tag tag-weapon">⚔ 武器</span><span class="equip-tag tag-ring">◉ 戒指</span><span class="equip-tag tag-rune">◇ 符文</span><span class="equip-tag tag-armor">▣ 防具</span></div>
+        <div class="loadout-copy"><p class="eyebrow"><span></span>BUILD YOUR LOADOUT</p><h2>一件裝備，<br><em>一種玩法。</em></h2><p>管理員可製作專屬 RPG 裝備。從素材、CustomModelData 到詞條，都能讓世界裡的每一件裝備有自己的故事。</p><div class="slot-list"><span>⚔ 武器</span><span>▣ 防具</span><span>◉ 戒指</span><span>● 項鍊</span><span>◇ 符文</span><span>✦ 特殊</span></div><a class="outline-link" href="#hopebox">查看 HopeBox <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="rewards section" id="hopebox">
+      <div class="wrap rewards-layout">
+        <div><p class="eyebrow"><span></span>REWARDS &amp; REASONS TO RETURN</p><h2>每次回來，<br><em>都有新的希望。</em></h2><p>HopeBox、活動禮包與會員稱號，讓每一次登入、每一次冒險都有值得收藏的獎勵。</p></div>
+        <div class="reward-cards"><article><span>✦</span><small>HOPEBOX</small><h3>開啟希望</h3><p>收集限定裝備與珍稀獎勵。</p><code>/hb list</code></article><article><span>▣</span><small>KITS</small><h3>活動禮包</h3><p>一般與活動禮包，登入就能領取。</p><code>/kit</code></article><article><span>◆</span><small>MEMBERSHIP</small><h3>VIP &amp; 稱號</h3><p>永久會員福利與專屬身份。</p><code>COMING SOON</code></article></div>
+      </div>
+    </section>
+
+    <section class="adventure section" id="players">
+      <div class="wrap"><header class="section-heading"><p class="eyebrow"><span></span>START YOUR ADVENTURE</p><h2>四步，找到你的遊玩方式。</h2></header><div class="journey"><article><span>01</span><b>建立空島</b><p>從一塊方塊開始，建立你的第一座天空基地。</p></article><i></i><article><span>02</span><b>提升 RPG 等級</b><p>完成任務、擊敗怪物，累積角色成長。</p></article><i></i><article><span>03</span><b>打造你的裝備</b><p>組合詞條與技能，建立專屬戰鬥流派。</p></article><i></i><article><span>04</span><b>挑戰世界 Boss</b><p>與夥伴並肩作戰，登上全服排行榜。</p></article></div></div>
+    </section>
+
+    <section class="community section" id="rank">
+      <div class="wrap community-layout">
+        <article class="rank-panel"><div class="panel-title"><div><small>LEADERBOARDS</small><h3>全服排行榜</h3></div><span>TOP 5</span></div><p class="panel-note">依遊戲內同步資料排序，RPG 等級不會使用 Minecraft 原版經驗等級。</p><div class="rank-tabs" role="group" aria-label="排行榜類型"><button type="button" class="on" aria-pressed="true" data-mode="power">戰力</button><button type="button" aria-pressed="false" data-mode="level">RPG 等級</button><button type="button" aria-pressed="false" data-mode="island">空島</button></div><div id="rank-list" aria-live="polite"><div class="rank-row"><span class="rank-no">—</span><span class="player"><i class="avatar">?</i>等待伺服器資料</span><span class="rank-value">--</span></div></div></article>
+        <div class="community-side" id="community"><article class="community-card"><p class="eyebrow"><span></span>HOPE STORY COMMUNITY</p><h3>找到下一位<br><em>一起冒險的夥伴。</em></h3><p>加入 Hope Story 社群，查看公告、更新日誌與玩家活動。Discord 串接完成後，這裡會成為你的冒險者公會。</p><button class="outline-link disabled" type="button" disabled>Discord 社群　即將開放</button></article><article class="status-strip"><span><i></i>伺服器狀態</span><b id="status-copy">即時同步</b><span>版本</span><b>1.20.1+</b></article></div>
+      </div>
+    </section>
+
+    <section class="news section" id="news"><div class="wrap news-layout"><div><p class="eyebrow"><span></span>CHRONICLE</p><h2>希望物語<br><em>持續更新。</em></h2><p class="news-intro">每一次更新，都是為了讓天空變得更大、冒險變得更深。</p><a class="outline-link" href="#join">查看完整公告 <span>→</span></a></div><div class="news-list"><article><time>09.17</time><div><span>網站更新</span><h3>Hope Story 完整官方網站改版</h3><p>新增世界、系統、空島成長、裝備、冒險流程與社群介紹。</p></div></article><article><time>09.13</time><div><span>RPG 系統</span><h3>RPG 等級與戰力同步調整</h3><p>排行榜現在會顯示真正的 RPG 等級，不再顯示原版經驗等級。</p></div></article><article><time>09.10</time><div><span>開發日誌</span><h3>HopeBox 與新手旅程持續擴充</h3><p>更多裝備、獎池、任務與副本內容正在準備中。</p></div></article></div></div></section>
+
+    <section class="join" id="join"><img src="assets/sky-realm-v3.webp" alt="" aria-hidden="true"><div class="wrap join-inner"><p class="eyebrow"><span></span>READY TO BUILD?</p><h2>雲端之上，<br><em>留一座島給你。</em></h2><p>複製伺服器位址，進入 Hope Story 開始你的天空冒險。</p><button class="cta" type="button" onclick="copyIp()"><span>複製伺服器 IP</span><b>play.hopestory.tw</b><i>→</i></button></div></section>
   </main>
-  <footer class="footer" id="rules"><div class="wrap footer-inner"><a class="brand" href="#home"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 29 17 46 24 29 31 24 46 19 31 2 24 19 17Z"/><circle cx="24" cy="24" r="6"/></svg><span class="brand-name"><b>HOPE STORY</b><small>希望物語</small></span></a><p>© 2026 Hope Story · Minecraft SkyBlock RPG</p><nav><a href="#features">遊戲世界</a><a href="#news">最新情報</a><a href="#rank">排行榜</a><a href="#hopebox">HopeBox</a></nav></div></footer>
+
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 29 17 46 24 29 31 24 46 19 31 2 24 19 17Z"/><circle cx="24" cy="24" r="6"/></svg><span class="brand-name"><b>HOPE STORY</b><small>希望物語</small></span></a><p>© 2026 Hope Story · Minecraft SkyBlock RPG · Java 1.20.1</p><nav><a href="#worlds">世界</a><a href="#features">特色</a><a href="#rank">排行</a><a href="#news">公告</a><a href="#join">加入</a></nav></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite">伺服器 IP 已複製</div>
-  <script src="assets/live.js?v=5"></script>
+  <script src="assets/live.js?v=6"></script>
 </body>
 </html>
